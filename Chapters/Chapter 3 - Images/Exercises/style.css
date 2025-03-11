@@ -20,7 +20,6 @@ h1 {
 p.subtitle {
     font-size: 18px;
     margin-bottom: 30px;
-    max-width: 600px;
 }
 
 .image-container {
@@ -47,4 +46,6 @@ img {
     margin-top: 10px;
     font-size: 16px;
     color: #4e2e22; 
+    max-width: 400px;
+    max-height: 50px;
 }
