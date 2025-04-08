@@ -45,9 +45,14 @@
             const costperliterinputting = document.getElementById('costPerLiter')
             const literpurchasedinputting = document.getElementById('litersPurchased')
             const resulttotal = document.getElementById('totalcost')
-            const button = document.getElementById('costPerLiter')
-            const costperliterinputting = document.getElementById('costPerLiter')
-
+            const button = document.getElementById('calculateBtn')
+            function onclickEvent() {
+                const cost = parseFloat(costperliterinputting.value)
+                const liter = parseFloat(literpurchasedinputting.value)
+                const total = cost*liter
+                resulttotal.textContent=total
+            }
+            button.addEventListener('click', onclickEvent)
         </script>
     </body>
 
