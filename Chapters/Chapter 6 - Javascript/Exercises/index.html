@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Petrol Calculator</title>
+
+        <style>
+
+        </style>
+    </head>
+
+    <body>
+        <h1>Petrol Calculator</h1>
+        <table class="panel">
+            <tbody>
+                <tr>
+                    <td>Cost per liter:</td>
+                    <td>		
+                        <input type="number" id="costPerLiter" value="1.72" step="0.01">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Liters Purchased:</td>
+                    <td>		
+                        <input type="number" id="litersPurchased" value="0" step="0.1">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center" style="padding-top: 8px;">
+                        <input type="button" id="calculateBtn" value="Calculate">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        TotalCost:
+                    </td>
+                    <td>
+                        <p id="totalcost">...</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <script>
+            const costperliterinputting = document.getElementById('costPerLiter')
+            const literpurchasedinputting = document.getElementById('litersPurchased')
+            const resulttotal = document.getElementById('totalcost')
+            const button = document.getElementById('costPerLiter')
+            const costperliterinputting = document.getElementById('costPerLiter')
+
+        </script>
+    </body>
+
+</html>
