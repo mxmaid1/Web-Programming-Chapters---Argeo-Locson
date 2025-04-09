@@ -1,0 +1,81 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('Images/shiskin.webp') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem;
+  }
+  
+
+  header h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #e91e63;
+    background: #d6d6d6;
+    padding: 10px 200px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+
+  .soundboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 960px;
+  }
+  
+
+  .sound-card {
+    background: white;
+    color: black;
+    border-radius: 16px;
+    padding: 1.2rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .sound-card:hover {
+    background: #e91e63;
+    color: white;
+    transform: translateY(-5px);
+  }
+
+  .sound-card.active {
+    background: #e91e63;
+    color: white;
+  }
+  
+  .sound-number {
+    font-size: 1rem;
+  }
+  
+  .sound-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+  }
+  
+  .sound-duration {
+    font-size: 0.95rem;
+    opacity: 0.7;
+  }
+  

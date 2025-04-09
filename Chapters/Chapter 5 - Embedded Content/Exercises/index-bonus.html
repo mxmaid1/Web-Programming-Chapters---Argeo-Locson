@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Audio Sampler</title>
+  <link rel="stylesheet" href="style-bonus.css" />
+</head>
+<body>
+  <header>
+    <h1>Audio Sampler</h1>
+  </header>
+
+  <main class="soundboard-grid">
+    <div class="sound-card" data-sound="ah-ha.mp3">
+      <p class="sound-number">1.</p>
+      <h2 class="sound-title">Ah-Ha</h2>
+      <p class="sound-duration">...</p>
+    </div>
+
+    <div class="sound-card" data-sound="back-of-the-net.mp3">
+      <p class="sound-number">2.</p>
+      <h2 class="sound-title">Back of the Net</h2>
+      <p class="sound-duration">...</p>
+    </div>
+
+    <div class="sound-card" data-sound="bangoutoforder.mp3">
+      <p class="sound-number">3.</p>
+      <h2 class="sound-title">Bang Out of Order</h2>
+      <p class="sound-duration">...</p>
+    </div>
+
+    <div class="sound-card" data-sound="dan.mp3">
+      <p class="sound-number">4.</p>
+      <h2 class="sound-title">Dan</h2>
+      <p class="sound-duration">...</p>
+    </div>
+
+    <div class="sound-card" data-sound="emailoftheevening.mp3">
+      <p class="sound-number">5.</p>
+      <h2 class="sound-title">Email of the Evening</h2>
+      <p class="sound-duration">...</p>
+    </div>
+
+    <div class="sound-card" data-sound="hellopartridge.mp3">
+      <p class="sound-number">6.</p>
+      <h2 class="sound-title">Hello Partridge</h2>
+      <p class="sound-duration">...</p>
+    </div>
+
+    <div class="sound-card" data-sound="iateascotchegg.mp3">
+      <p class="sound-number">7.</p>
+      <h2 class="sound-title">I Ate a Scotch Egg</h2>
+      <p class="sound-duration">...</p>
+    </div>
+
+    <div class="sound-card" data-sound="imconfused.mp3">
+      <p class="sound-number">8.</p>
+      <h2 class="sound-title">I'm Confused</h2>
+      <p class="sound-duration">...</p>
+    </div>
+  </main>
+  <script>
+    document.querySelectorAll(".sound-card").forEach(card => {
+      const fileName = card.dataset.sound;
+      const audio = new Audio(`Audio Sampler/Audio/${fileName}`);
+  
+      card.addEventListener("click", () => {
+        audio.currentTime = 0;
+        audio.play();
+      });
+
+      audio.addEventListener("loadedmetadata", () => {
+        const durationElem = card.querySelector(".sound-duration");
+        const durationSec = audio.duration.toFixed(2);
+        durationElem.textContent = `${durationSec}s`;
+      });
+    });
+  </script>
+  
+</body>
+</html>
